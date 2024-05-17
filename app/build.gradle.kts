@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -69,4 +71,25 @@ dependencies {
     implementation("io.ktor:ktor-client-android:2.3.11")
     implementation("io.ktor:ktor-client-json-jvm:2.3.11")
     implementation("io.ktor:ktor-client-serialization-jvm:2.3.11")
+
+
+    //Dagger - Hilt
+    implementation("com.google.dagger:hilt-android:2.40.5")
+    kapt("com.google.dagger:hilt-android-compiler:2.40.5")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
+
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    //Timber
+    implementation("com.jakewharton.timber:timber:5.0.1")
 }
